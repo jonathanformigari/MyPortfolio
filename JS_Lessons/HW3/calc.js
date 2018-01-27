@@ -4,7 +4,7 @@
 
 $("button").click(function() {
 
-    if (this.value) {
+    if ($(this).value) {
 
         if ($("#display").data("fromPrevious") == true) { 
             
@@ -48,9 +48,7 @@ $("button").click(function() {
     
         } 
 
-    }
-
-    else if {
+    } else if ($(this).text ) {
 
         if ($("#display").data("fromPrevious") == true) { 
             resetCalculator($("#display").val()); 
@@ -76,7 +74,7 @@ $("button").click(function() {
 
 function resetCalculator(curValue) { 
     $("#display").val(curValue); 
-    $(".function-button").removeClass("pendingFunction"); 
+    $("#addButton").removeClass("pendingFunction"); 
     $("#display").data("isPendingFunction", false); 
     $("#display").data("thePendingFunction", ""); 
     $("#display").data("valueOneLocked", false); 
